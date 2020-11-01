@@ -4,7 +4,7 @@ Esse é o repositório para o projeto do nosso site.
 
 ## Instalação
 
-Use o gerenciador de pacotes  [pip](https://pip.pypa.io/en/stable/) para instalar Virtualenvwrapper ([detalhes de configueação](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)). Após configuração do Virtualenvwrapper no seu computador, crie um ambiente virtual para o projeto
+Use o gerenciador de pacotes  [pip](https://pip.pypa.io/en/stable/) para instalar Virtualenvwrapper ([detalhes de configuração](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)). Após configuração do Virtualenvwrapper no seu computador, crie um ambiente virtual para o projeto
 
 ```bash
 mkvirtualenv pyladies-site
