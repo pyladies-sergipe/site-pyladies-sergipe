@@ -1,0 +1,27 @@
+{% load static %}
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-lg-8 mx-auto centerlized">
+        <h2 class="mb-4 text-uppercase">Eventos</h2>
+    </div>
+  </div>
+  <div id="forcecentered">
+      <div class="event-list bd-highlight">
+        {% for i in '123'|make_list %}
+
+          <div class="card event-dash-card">
+            <div class="card-body">
+              <h1 class="card-title"><span class="event-dash-card-icon"><i class="fa fa-calendar"></i> </span><span class="day">25</span>
+              <small>/10/2020<br/>
+                4:30PM</small>
+              </h1>
+              <p class="card-text">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+  </div>
+
+</div>

@@ -1,0 +1,97 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% include 'static/head.html'%}
+</head>
+
+<body id="page-top">
+    {% include 'components/components.navbar.html'%}
+
+    <!-- Blog Section -->
+    <section id="blog" class="projects-section bg-light">
+
+      {% include 'components/components.eventos.html'%}
+
+    </section>
+
+    <section>
+        <div class="container-fluid bg-cinza box-main">
+            <div class="container">
+        
+                <div class="header-box">
+                    <h3>EVENTOS
+                        <span class="header-box-enfase">ANTERIORES</span>
+                    </h3>
+                    <p>{{ agendaSubtitulo.introducao}}</p>
+                </div>
+<!--         
+                {% for atividadeAgenda in agenda %}
+                <div class="box-agenda">
+                    <div class="agenda-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="data">
+                                    <span class="dia">{{atividadeAgenda.data.day}}</span>
+                                    <p class="mes">{{atividadeAgenda.data|date:"F"}}/{{atividadeAgenda.data.year}}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="desc">
+                                    <div class="desc-header">
+                                        <p class="enfase">{{atividadeAgenda.data.local}}</p>
+                                        <p>
+                                            <span class="span-header">{{atividadeAgenda.horarioInicio}} - {{atividadeAgenda.horarioFim}}</span>
+                                            <span>{{atividadeAgenda.bairro}}</span>
+                                        </p>
+                                    </div>
+                                    <div class="">
+                                        <p>{{atividadeAgenda.resumo}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %} -->
+        
+                {% for i in '123'|make_list %}
+                <div class="box-agenda">
+                    <div class="agenda-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="data">
+                                    <span class="dia">30</span>
+                                    <p class="mes">JULHO</p>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="desc">
+                                    <div class="desc-header">
+                                        <p class="enfase">NA DESPENSA E NA PALMA DA MÃO</p>
+                                        <p>
+                                            <span class="span-header">8:00 - 12:00</span>
+                                            <span>BAIRRO JARDINS</span>
+                                        </p>
+                                    </div>
+                                    <div class="">
+                                        <p>Lorem Ipsum é simplesmente texto fictício da indústria tipográfica e de impressão.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+        
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+
+  {% include 'static/footer.html'%}
+</body>
+
+</html>

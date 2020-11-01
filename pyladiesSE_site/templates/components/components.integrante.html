@@ -1,0 +1,48 @@
+{% load static %}
+
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5 integrantes-row">
+        {% for lady_obj in ladies_list %}
+            <div class="integrantes-foto">
+                    <a href="/ladies/{{lady_obj.id}}"><img class="img-thumbnail img-fluid img-fluid " src="{{ lady_obj.foto.url }}" alt="">
+                    <p style="padding-left: 10%;">{{lady_obj.nome}}</p></a>
+                    <!-- {% if lady_obj.twitter_link %}
+                                  <a href="{{ lady_obj.twitter_link }}" class="mx-2">
+                                    <i class="fab fa-twitter"></i>
+                                  </a>
+                                {% endif %}
+
+                                {% if lady_obj.facebook_link %}
+                                  <a href="{{ lady_obj.facebook_link }}" class="mx-2">
+                                    <i class="fab fa-facebook-f"></i>
+                                  </a>
+                                {% endif %}
+
+                                {% if lady_obj.github_link %}
+                                  <a href="{{ lady_obj.github_link }}" class="mx-2">
+                                    <i class="fab fa-github"></i>
+                                  </a>
+                                {% endif %}
+
+                                {% if lady_obj.linkedin_link %}
+                                  <a href="{{ lady_obj.linkedin_link }}" class="mx-2">
+                                    <i class="fab fa-linkedin"></i>
+                                  </a>
+                                {% endif %}
+
+                                {% if lady_obj.blog_pessoal %}
+                                  <a href="{{ lady_obj.blog_pessoal }}" class="mx-2">
+                                    <i class="fab fa-gmail"></i>
+                                  </a>
+                                {% endif %}-->
+            </div>
+        {% endfor %}
+        <!-- <div class="integrantes-foto ">
+            <img class="img-thumbnail img-fluid" src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="">
+            <p>Joana Fernanda</p>
+        </div>  -->
+    </div> 
+
+
+</div>
+
+

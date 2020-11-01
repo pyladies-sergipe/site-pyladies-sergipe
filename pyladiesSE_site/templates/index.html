@@ -1,0 +1,47 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% include 'static/head.html'%}
+</head>
+
+<body id="page-top">
+
+  {% include 'static/header.html'%}
+
+  <!-- About Section -->
+  <section id="sobre" class="about-section-pink text-center">
+    {% include 'components/components.sobre.html'%}
+
+  </section>  
+  
+  <!-- Eventos Section -->
+  <section id="eventos" class="projects-section bg-light">
+
+    {% include 'components/components.eventos.html'%}
+    <button id="blog" class="btn btn-block btn-primary blog-botao " style="margin-top:3%">Ver mais</button>
+
+
+  </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="projects-section bg-light">
+
+      {% include 'components/components.blog.html'%}
+      <button id="blog" class="btn btn-block btn-primary blog-botao ">Ver mais</button>
+
+
+    </section>
+
+  <!-- Signup Section -->
+  <section id="contato" class="signup-section">
+    {% include 'components/components.contato.html'%}
+
+  </section>
+  <!-- Footer -->
+
+  {% include 'static/footer.html'%}
+</body>
+
+</html>

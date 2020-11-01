@@ -1,0 +1,81 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% include 'static/head.html'%}
+</head>
+
+<body id="page-top">
+    {% include 'components/components.navbar.html'%}
+
+  <section>
+  
+    <div class="container" style="padding-top:10%;">
+
+      <div class="row" style="padding:10px">
+        <div class="col-lg-8 mx-auto centerlized">
+            <h2 class="mb-4 text-uppercase">Py<span class="pink-color"><strong>Ladies</strong></span></h2>
+        </div>
+      </div>
+  
+      {% if lady_obj %}
+                    <div class="row eqp-apresentacao">
+                        <div class="col-md-4 text-center">
+                            <img class="lady_profile" src="{{ lady_obj.foto.url }}" alt="Equipe imagem">
+                            <!-- <p class="email"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>Envie um Email</a></p> -->
+                        </div>
+                        <div class="col-md-8">
+                            <h3>{{lady_obj.nome}}</h3>
+                            {% autoescape off %}<p>{{lady_obj.biografia}}</p> {% endautoescape %}
+                            <div class="row">
+                              <div class="social d-flex justify-content-center">
+                                {% if lady_obj.twitter_link %}
+                                  <a href="{{ lady_obj.twitter_link }}" class="mx-2">
+                                    <i class="fab fa-twitter"></i>
+                                  </a>
+                                {% endif %}
+
+                                {% if lady_obj.facebook_link %}
+                                  <a href="{{ lady_obj.facebook_link }}" class="mx-2">
+                                    <i class="fab fa-facebook-f"></i>
+                                  </a>
+                                {% endif %}
+
+                                {% if lady_obj.github_link %}
+                                  <a href="{{ lady_obj.github_link }}" class="mx-2">
+                                    <i class="fab fa-github"></i>
+                                  </a>
+                                {% endif %}
+
+                                {% if lady_obj.linkedin_link %}
+                                  <a href="{{ lady_obj.linkedin_link }}" class="mx-2">
+                                    <i class="fab fa-linkedin"></i>
+                                  </a>
+                                {% endif %}
+
+                                {% if lady_obj.blog_pessoal %}
+                                  <a href="{{ lady_obj.blog_pessoal }}" class="mx-2">
+                                    <i class="fab fa-gmail"></i>
+                                  </a>
+                                {% endif %}
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+      {% endif %}
+  </div>
+      
+      <!-- Ladies Section -->
+      {% include 'components/components.integrante.html' with ladies_list=ladies_list %}
+  
+  
+    </section>
+
+
+  <!-- Footer -->
+
+  {% include 'static/footer.html'%}
+</body>
+
+</html>
